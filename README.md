@@ -37,5 +37,6 @@ now:
     --pre-hook "echo issuing ssl ... && echo !" \
     --post-hook "openssl rsa -in '/root/.acme.sh/*.muxixyz.com/*.muxixyz.com.key' -out '/root/.acme.sh/*.muxixyz.com/*.muxixyz.com.key.pem' -outform PEM && /opt/auto-cdn-dns/qiniu-cdn-dns-automation_linux_amd64" \
     --renew-hook "openssl rsa -in '/root/.acme.sh/*.muxixyz.com/*.muxixyz.com.key' -out '/root/.acme.sh/*.muxixyz.com/*.muxixyz.com.key.pem' -outform PEM && /opt/auto-cdn-dns/qiniu-cdn-dns-automation_linux_amd64" \
-    --dnssleep
+    --dnssleep 30 \
+    -- log
 ```
